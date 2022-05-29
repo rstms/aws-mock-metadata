@@ -21,7 +21,6 @@ def write_user_config():
         ofp.write('[aws]\n')
         for k,v in os.environ.items():
             if k in key_map:
-                print k, key_map[k], v
                 ofp.write(key_map[k] + '=' + v + '\n')
         ofp.write('mfa_enabled=False\n')
         ofp.write('[metadata]\n')
